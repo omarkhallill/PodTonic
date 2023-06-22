@@ -43,6 +43,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.regex.*;
 import org.json.*;
+import com.pod.tonic.FileUtil;
+
 
 public class MainactivActivity extends AppCompatActivity {
 	
@@ -181,7 +183,7 @@ public class MainactivActivity extends AppCompatActivity {
 					public void run() {
 						if (backn == 1) {
 							backn = 0;
-							SketchwareUtil.showMessage(getApplicationContext(), "Double press to exit");
+							FileUtil.showMessage(getApplicationContext(), "Double press to exit");
 						}
 						else {
 							if (backn > 1) {

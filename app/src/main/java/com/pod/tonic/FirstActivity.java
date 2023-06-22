@@ -191,7 +191,7 @@ public class FirstActivity extends AppCompatActivity {
 								public void run() {
 										if (backn == 1) {
 												backn = 0;
-												SketchwareUtil.showMessage(getApplicationContext(), "Double press to exit");
+												FileUtil.showMessage(getApplicationContext(), "Double press to exit");
 										}
 										else {
 												if (backn > 1) {

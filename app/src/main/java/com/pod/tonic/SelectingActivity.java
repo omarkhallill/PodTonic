@@ -3,6 +3,7 @@ package com.pod.tonic;
 import android.animation.*;
 import android.app.*;
 import com.pod.tonic.R;
+import com.pod.tonic.FileUtil;
 import android.app.Activity;
 import android.content.*;
 import android.content.Intent;
@@ -197,7 +198,7 @@ public class SelectingActivity extends AppCompatActivity {
 								public void run() {
 										if (backn == 1) {
 												backn = 0;
-												SketchwareUtil.showMessage(getApplicationContext(), "Double press to exit");
+												FileUtil.showMessage(getApplicationContext(), "Double press to exit");
 										}
 										else {
 												if (backn > 1) {

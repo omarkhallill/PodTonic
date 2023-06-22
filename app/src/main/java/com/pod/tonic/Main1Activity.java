@@ -173,21 +173,21 @@ public class Main1Activity extends AppCompatActivity {
 			@Override
 			public void onClick(View _view) {
 				if (edittext1.getText().toString().equals("") || edittext2.getText().toString().equals("")) {
-					SketchwareUtil.showMessage(getApplicationContext(), "Please fill in all required fields");
+					FileUtil.showMessage(getApplicationContext(), "Please fill in all required fields");
 				}
 				else {
 					if (edittext3.getText().toString().equals("") || edittext4.getText().toString().equals("")) {
-						SketchwareUtil.showMessage(getApplicationContext(), "Please fill in all required fields");
+						FileUtil.showMessage(getApplicationContext(), "Please fill in all required fields");
 					}
 					else {
 						if (edittext5.getText().toString().equals("")) {
-							SketchwareUtil.showMessage(getApplicationContext(), "Please fill in all required fields");
+							FileUtil.showMessage(getApplicationContext(), "Please fill in all required fields");
 						}
 						if (!edittext3.getText().toString().equals(edittext4.getText().toString())) {
-							SketchwareUtil.showMessage(getApplicationContext(), "Password do not match, please try again.");
+							FileUtil.showMessage(getApplicationContext(), "Password do not match, please try again.");
 						}
 						else {
-							SketchwareUtil.showMessage(getApplicationContext(), "Registering ...");
+							FileUtil.showMessage(getApplicationContext(), "Registering ...");
 							auth.createUserWithEmailAndPassword(edittext2.getText().toString(), edittext3.getText().toString()).addOnCompleteListener(Main1Activity.this, _auth_create_user_listener);
 							configuration.edit().putString("username", edittext1.getText().toString()).commit();
 						}
@@ -397,14 +397,14 @@ public class Main1Activity extends AppCompatActivity {
 					map.put("uid", FirebaseAuth.getInstance().getCurrentUser().getUid());
 					map.put("email", FirebaseAuth.getInstance().getCurrentUser().getEmail());
 					users.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).updateChildren(map);
-					SketchwareUtil.showMessage(getApplicationContext(), "Successfully registered");
+					FileUtil.showMessage(getApplicationContext(), "Successfully registered");
 					loginPrefs.edit().putString("signup", "skip").commit();
 					intent.setClass(getApplicationContext(), SelectingActivity.class);
 					startActivity(intent);
 					finish();
 				}
 				else {
-					SketchwareUtil.showMessage(getApplicationContext(), _errorMessage);
+					FileUtil.showMessage(getApplicationContext(), _errorMessage);
 				}
 			}
 		};
@@ -470,7 +470,7 @@ public class Main1Activity extends AppCompatActivity {
 								public void run() {
 										if (backn == 1) {
 												backn = 0;
-												SketchwareUtil.showMessage(getApplicationContext(), "Double press to exit");
+												FileUtil.showMessage(getApplicationContext(), "Double press to exit");
 										}
 										else {
 												if (backn > 1) {
