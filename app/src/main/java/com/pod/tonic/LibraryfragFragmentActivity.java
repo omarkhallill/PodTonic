@@ -1,6 +1,7 @@
 package com.pod.tonic;
 
 import android.animation.*;
+import com.pod.tonic.R;
 import android.app.*;
 import android.content.*;
 import android.content.res.*;
@@ -38,7 +39,8 @@ import java.util.TimerTask;
 import java.util.regex.*;
 import org.json.*;
 import android.view.Window;
-import android.content.Context;
+import android.content.Context;
+
 
 public class LibraryfragFragmentActivity extends Fragment {
 	
@@ -138,4 +140,4 @@ public class LibraryfragFragmentActivity extends Fragment {
 		vscroll1.setVerticalScrollBarEnabled(false);
 	}
 	
-}
+}

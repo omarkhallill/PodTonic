@@ -23,6 +23,7 @@ import android.view.View.*;
 import android.view.animation.*;
 import android.webkit.*;
 import android.widget.*;
+import com.pod.tonic.R;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;

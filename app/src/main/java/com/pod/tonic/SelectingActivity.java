@@ -2,6 +2,7 @@ package com.pod.tonic;
 
 import android.animation.*;
 import android.app.*;
+import com.pod.tonic.R;
 import android.app.Activity;
 import android.content.*;
 import android.content.Intent;

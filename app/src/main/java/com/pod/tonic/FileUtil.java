@@ -23,6 +23,8 @@ import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import com.pod.tonic.R;
+
 
 import java.io.File;
 import java.io.FileInputStream;

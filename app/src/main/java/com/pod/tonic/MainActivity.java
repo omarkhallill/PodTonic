@@ -2,6 +2,7 @@ package com.pod.tonic;
 
 import com.pod.tonic.SplashActivity;
 import android.animation.*;
+import com.pod.tonic.R;
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.app.*;

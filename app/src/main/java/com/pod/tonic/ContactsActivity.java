@@ -52,6 +52,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.*;
 import org.json.*;
+import com.pod.tonic.R;
 
 public class ContactsActivity extends AppCompatActivity {
 	
@@ -265,4 +266,4 @@ public class ContactsActivity extends AppCompatActivity {
 	public int getDisplayHeightPixels() {
 		return getResources().getDisplayMetrics().heightPixels;
 	}
-}
+}

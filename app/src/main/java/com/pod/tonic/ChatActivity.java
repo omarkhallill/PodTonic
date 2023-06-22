@@ -1,5 +1,6 @@
 package com.pod.tonic;
 
+import com.pod.tonic.R;
 import android.animation.*;
 import android.app.*;
 import android.content.*;

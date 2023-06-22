@@ -3,6 +3,7 @@ package com.pod.tonic;
 import android.animation.*;
 import android.app.*;
 import android.content.*;
+import com.pod.tonic.R;
 import android.content.res.*;
 import android.graphics.*;
 import android.graphics.drawable.*;
@@ -56,4 +57,4 @@ public class LiveFragmentActivity extends Fragment {
 	private void initializeLogic() {
 	}
 	
-}
+}
