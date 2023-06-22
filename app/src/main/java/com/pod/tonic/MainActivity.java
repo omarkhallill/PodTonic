@@ -211,10 +211,10 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View _view) {
 				if (edittext1.getText().toString().equals("") || edittext2.getText().toString().equals("")) {
-					FileUtil.showMessage(getApplicationContext(), "Please enter a valid email and password");
+					Util.showMessage(getApplicationContext(), "Please enter a valid email and password");
 				}
 				else {
-					FileUtil.showMessage(getApplicationContext(), "Logging in ...");
+					Util.showMessage(getApplicationContext(), "Logging in ...");
 					auth.signInWithEmailAndPassword(edittext2.getText().toString(), edittext1.getText().toString()).addOnCompleteListener(MainActivity.this, _auth_sign_in_listener);
 				}
 			}
@@ -491,7 +491,7 @@ public class MainActivity extends AppCompatActivity {
 				final String _errorMessage = _param1.getException() != null ? _param1.getException().getMessage() : "";
 				if (_success) {
 					loginPrefs.edit().putString("login", "skip").commit();
-					FileUtil.showMessage(getApplicationContext(), "Logged in successfully ");
+					Util.showMessage(getApplicationContext(), "Logged in successfully ");
 					intent.setClass(getApplicationContext(), MainactivActivity.class);
 					startActivity(intent);
 					In.putExtra("email", FirebaseAuth.getInstance().getCurrentUser().getEmail());
@@ -502,7 +502,7 @@ public class MainActivity extends AppCompatActivity {
 						auth.createUserWithEmailAndPassword(emailAddress, password).addOnCompleteListener(MainActivity.this, _auth_create_user_listener);
 					}
 					else {
-						FileUtil.showMessage(getApplicationContext(), _errorMessage);
+						Util.showMessage(getApplicationContext(), _errorMessage);
 					}
 				}
 			}
@@ -578,7 +578,7 @@ public class MainActivity extends AppCompatActivity {
 					public void run() {
 						if (backn == 1) {
 							backn = 0;
-							FileUtil.showMessage(getApplicationContext(), "Double press to exit");
+							Util.showMessage(getApplicationContext(), "Double press to exit");
 						}
 						else {
 							if (backn > 1) {

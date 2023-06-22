@@ -312,7 +312,7 @@ public class CategoriesActivity extends AppCompatActivity {
 					public void run() {
 						if (backn == 1) {
 							backn = 0;
-							FileUtil.showMessage(getApplicationContext(), "Double press to exit");
+							Util.showMessage(getApplicationContext(), "Double press to exit");
 						}
 						else {
 							if (backn > 1) {
