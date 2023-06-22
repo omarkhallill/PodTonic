@@ -1,25 +1,13 @@
 package com.pod.tonic;
 
 import android.content.Intent;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.security.AccessController;
-
 import android.content.Context;
 import android.util.Log;
 
 public class Logger {
-
-    /**
-     * Logcat Reader Class
-     * <p>
-     * Uses:
-     * <br>
-     *  - "Logger.broadcastLog(String)" to manually send a debug log that's then viewable in Logcat Reader
-     *  - "Logger.stopLogging()" to stop logging
-     */
 
     private static Thread loggerThread = new Thread() {
         @Override
@@ -61,7 +49,7 @@ public class Logger {
     }
 
     public static void broadcastLog(String log) {
-        Context context = AndroidApp.getContext();
+        Context context = CustomApplication.getAppContext();
 
         Intent intent = new Intent();
         intent.setAction("com.sketchware.remod.ACTION_NEW_DEBUG_LOG");
