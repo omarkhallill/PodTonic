@@ -1,6 +1,7 @@
 package com.pod.tonic;
 
 import android.animation.*;
+import android.annotation.SuppressLint;
 import android.app.*;
 import com.pod.tonic.R;
 import android.content.*;
@@ -105,6 +106,7 @@ public class SplashActivity extends AppCompatActivity {
 		return random.nextInt(_max - _min + 1) + _min;
 	}
 	
+	@SuppressLint("SuspiciousIndentation")
 	@Deprecated
 	public ArrayList<Double> getCheckedItemPositionsToArray(ListView _list) {
 		ArrayList<Double> _result = new ArrayList<Double>();
